@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group13.csdl.moviebooking.controller.BookingController">
+    <children>
+        <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="900.0" style="-fx-background-color: #2c3e50;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <padding>
+                <Insets left="20.0" right="20.0" />
+            </padding>
+            <children>
+                <Button mnemonicParsing="false" onAction="#handleBack" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 5; -fx-text-fill: white; -fx-cursor: hand;" text="&lt; Quay lại Trang chủ" />
+                <Label text="Chi Tiết &amp; Đặt Vé" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets left="20.0" />
+                    </HBox.margin>
+                </Label>
+            </children>
+        </HBox>
+
+        <VBox layoutY="60.0" prefHeight="540.0" prefWidth="350.0" spacing="15.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="60.0">
+            <padding>
+                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+            </padding>
+            <children>
+                <Label fx:id="lblTenPhim" text="Tên Phim Ở Đây" textFill="#2c3e50" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="26.0" />
+                    </font>
+                </Label>
+
+                <HBox spacing="10.0">
+                    <children>
+                        <Label style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-padding: 5 10; -fx-background-radius: 15;" text="Đang chiếu" />
+                        <Label fx:id="lblThoiLuong" style="-fx-background-color: #ecf0f1; -fx-text-fill: #7f8c8d; -fx-padding: 5 10; -fx-background-radius: 15;" text="120 phút" />
+                    </children>
+                </HBox>
+
+                <Separator prefWidth="200.0" />
+
+                <Label text="Ngôn ngữ chính:" textFill="#7f8c8d" />
+                <Label fx:id="lblNgonNgu" text="Tiếng Việt" textFill="#2c3e50">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+
+                <Label text="Nội dung:" textFill="#7f8c8d">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+                <ScrollPane fitToWidth="true" hbarPolicy="NEVER" style="-fx-background-color: transparent; -fx-background: transparent;">
+                    <content>
+                        <TextFlow>
+                            <children>
+                                <Text fx:id="txtNoiDung" fill="#2c3e50" strokeType="OUTSIDE" strokeWidth="0.0" text="Mô tả nội dung phim sẽ hiển thị ở đây..." />
+                            </children>
+                        </TextFlow>
+                    </content>
+                </ScrollPane>
+            </children>
+        </VBox>
+
+        <VBox layoutX="370.0" layoutY="80.0" prefHeight="500.0" prefWidth="510.0" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="370.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
+            <children>
+                <Label text="Chọn Suất Chiếu" textFill="#2c3e50">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Label>
+                <Label text="Vui lòng chọn giờ chiếu phù hợp để tiếp tục chọn ghế:" textFill="#7f8c8d" />
+
+                <ScrollPane fitToWidth="true" prefHeight="400.0" prefWidth="510.0" style="-fx-background-color: transparent; -fx-background: transparent;" VBox.vgrow="ALWAYS">
+                    <content>
+                        <FlowPane fx:id="fpSuatChieu" hgap="15.0" vgap="15.0" prefWrapLength="480.0">
+                        </FlowPane>
+                    </content>
+                </ScrollPane>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

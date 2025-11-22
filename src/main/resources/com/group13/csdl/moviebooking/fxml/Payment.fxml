@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group13.csdl.moviebooking.controller.PaymentController">
+    <children>
+        <VBox alignment="TOP_CENTER" layoutX="150.0" layoutY="30.0" prefHeight="440.0" prefWidth="400.0" spacing="10.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="30.0">
+            <padding>
+                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+            </padding>
+            <children>
+                <Label text="XÁC NHẬN THANH TOÁN" textFill="#2c3e50">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Label>
+                <Label text="Vui lòng kiểm tra kỹ thông tin vé" textFill="#7f8c8d" />
+
+                <Separator prefWidth="200.0">
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                    </VBox.margin>
+                </Separator>
+
+                <VBox spacing="15.0">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                            <children>
+                                <Label prefWidth="100.0" text="Phim:" textFill="#7f8c8d" />
+                                <Label fx:id="lblTenPhim" text="Tên Phim" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                            <children>
+                                <Label prefWidth="100.0" text="Suất chiếu:" textFill="#7f8c8d" />
+                                <Label fx:id="lblSuatChieu" text="19:00 - 20/11/2023" textFill="#2c3e50" />
+                            </children>
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                            <children>
+                                <Label prefWidth="100.0" text="Phòng chiếu:" textFill="#7f8c8d" />
+                                <Label fx:id="lblPhong" text="Phòng 01" textFill="#2c3e50" />
+                            </children>
+                        </HBox>
+
+                        <HBox alignment="TOP_LEFT" spacing="10.0">
+                            <children>
+                                <Label prefWidth="100.0" text="Ghế đã chọn:" textFill="#7f8c8d" />
+                                <Label fx:id="lblGhe" maxWidth="200.0" text="A1, A2" textFill="#2c3e50" wrapText="true">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+
+                <Separator prefWidth="200.0">
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="20.0" />
+                    </VBox.margin>
+                </Separator>
+
+                <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                    <children>
+                        <Label text="TỔNG TIỀN:" textFill="#2c3e50">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblTongTien" text="0 VNĐ" textFill="#e74c3c">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+
+                <Label fx:id="lblMessage" textFill="#e74c3c" visible="false" />
+
+                <HBox alignment="CENTER" spacing="20.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#handleBack" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: white; -fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-cursor: hand;" text="Hủy bỏ" />
+                        <Button mnemonicParsing="false" onAction="#handlePay" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand;" text="THANH TOÁN" />
+                    </children>
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
