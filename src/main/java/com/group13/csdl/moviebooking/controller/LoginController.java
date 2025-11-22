@@ -25,8 +25,8 @@ public class LoginController {
 
     @FXML
     public void handleLogin(ActionEvent event) {
-        //        String taiKhoan = tfTaiKhoan.getText();
-//        String matKhau = pfMatKhau.getText();
+        String taiKhoan = tfTaiKhoan.getText();
+        String matKhau = pfMatKhau.getText();
 
 
 //        String taiKhoan = "khach1";
@@ -36,8 +36,8 @@ public class LoginController {
 //        String matKhau = "Admin@123";
 
 
-        String taiKhoan = "staff1";
-        String matKhau = "Staff@123";
+//        String taiKhoan = "staff1";
+//        String matKhau = "Staff@123";
 
         if (taiKhoan.isEmpty() || matKhau.isEmpty()) {
             lblMessage.setText("Vui lòng nhập đầy đủ thông tin!");
